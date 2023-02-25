@@ -1,2 +1,2 @@
 # happygoluckycodeeditor.github.io
-This is the Website portfolio in progress 
+This is my Website portfolio in progress 
