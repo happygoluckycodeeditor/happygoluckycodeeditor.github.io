@@ -15,6 +15,17 @@ img {
     background-color:aliceblue;
 }
 
+.logo2 {
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+  height: auto;
+  max-width: 20%;
+}
+
+
+
+
 /* adding fade in text */
 /*Delete once you learn the method more properly*/
 
