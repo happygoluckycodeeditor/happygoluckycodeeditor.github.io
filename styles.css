@@ -19,7 +19,6 @@ img {
   position: absolute;
   bottom: 0px;
   right: 0px;
-  height: auto;
   max-width: 20%;
 }
 
@@ -37,11 +36,7 @@ img {
   font-size: small;
 }
 
-
-
 /* adding fade in text */
-/*Delete once you learn the method more properly*/
-
 .fade-in-text {
     animation: fadeIn 2s;
     -webkit-animation: fadeIn 2s;
