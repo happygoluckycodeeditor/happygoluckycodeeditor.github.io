@@ -7,8 +7,12 @@ body {
     margin: 0 auto;
 }
 
-h1, h2, h3{
+h1, h2 {
     font-family: 'Abel', Helvetica, sans-serif;
+}
+
+h3 {
+  font-family: 'Kokoro';
 }
 
 img {
