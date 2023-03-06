@@ -28,6 +28,7 @@ img {
   bottom: 0px;
   right: 0px;
   max-width: 20%;
+  background: transparent;
 }
 
 .thanks {
