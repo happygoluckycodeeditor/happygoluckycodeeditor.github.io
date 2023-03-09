@@ -15,6 +15,23 @@ h3 {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+.eng-dsc {
+  max-width: 50%;
+}
+
+.flexy h2 {
+  text-align: center;
+  color: brown;
+  align-self: center;
+  font-weight: bold;
+}
+
+.flexy {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
 img {
     border-radius: 50%;
 }
