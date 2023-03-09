@@ -1,8 +1,50 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  background-color: black;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+.nav-bar h3 {
+  color: white;
+  background-color: black;
+  font-family: 'Abel', sans-serif;
+
+}
+
+.nav-bar h3 a {
+  background-color: black;
+  color: white;
+}
+
+.nav-bar h3 a:link {
+  text-decoration: none;
+}
+
+.nav-bar h3 a:hover {
+  cursor: pointer;
+}
 
 body {
+  padding-top: 4em;
     text-align: center;
     margin: 0 auto;
 }
@@ -32,7 +74,7 @@ h3 {
   gap: 20px;
 }
 
-img {
+.profile-pic {
     border-radius: 50%;
 }
 
@@ -61,7 +103,30 @@ img {
 
 }
 
+.jp-dsc {
+  padding-top: 3em;
+}
 
+.data-analysis {
+  padding-top: 20em;
+  padding-bottom: 20em;
+}
+
+.data-analysis p {
+  font-family: 'Abel';
+  font-size: xx-large;
+}
+
+.html-project {
+  padding-top: 20em;
+  padding-bottom: 20em;
+  font-family: 'Abel';
+}
+
+.html-project p {
+  font-family: 'Abel';
+  font-size: xx-large;
+}
 
 .foot {
   margin: 20px;
