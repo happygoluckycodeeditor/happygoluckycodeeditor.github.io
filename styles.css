@@ -100,6 +100,7 @@ h3 {
 .thanks {
   font-family: 'Abel', sans-serif;
   font-weight: bold;
+  padding-top: 30px;
 }
 
 .introduction {
@@ -109,6 +110,23 @@ h3 {
   font-family: 'Noto Sans JP',Arial, Helvetica;
 
 }
+
+#repobutton {
+  padding: 40px;
+  background-color: chocolate;
+  width: 30%;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
+
+#repobutton > a {
+  background-color: chocolate;
+  color: aliceblue;
+  font-size: x-large;
+  font-family: 'Abel', sans-serif;
+}
+
 
 .jp-dsc {
   padding-top: 3em;
