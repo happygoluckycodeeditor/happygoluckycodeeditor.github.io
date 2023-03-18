@@ -7,6 +7,16 @@
   }
 }
 
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+
+
 * {
   padding: 0px;
   margin: 0px;
@@ -21,6 +31,10 @@ header {
   align-items: center;
   position: fixed;
   top: 0;
+}
+
+.nav-bar {
+  z-index: 2;
 }
 
 .nav-bar h3 {
@@ -166,6 +180,8 @@ h3 {
 
 
 /* adding fade in text */
+
+/*
 .fade-in-text {
     animation: fadeIn 2s;
     -webkit-animation: fadeIn 2s;
@@ -173,7 +189,7 @@ h3 {
     -o-animation: fadeIn 2s;
     -ms-animation: fadeIn 2s;
   }
-  
+
   @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
@@ -198,3 +214,19 @@ h3 {
     0% { opacity: 0; }
     100% { opacity: 1; }
   } 
+*/
+
+
+/* adding scroll animation*/
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
