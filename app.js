@@ -22,3 +22,5 @@ const observer1 = new IntersectionObserver((entries) => {
 
 const hiddenElements1 = document.querySelectorAll('.hidden1');
 hiddenElements1.forEach((el) => observer1.observe(el));
+
+/* The Javascript is currently dormant at the moment */
