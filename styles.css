@@ -184,7 +184,7 @@ h3 {
 
 /* adding fade in text */
 
-/*
+
 .fade-in-text {
     animation: fadeIn 2s;
     -webkit-animation: fadeIn 2s;
@@ -217,14 +217,14 @@ h3 {
     0% { opacity: 0; }
     100% { opacity: 1; }
   } 
-*/
+
 
 
 /* adding scroll animation*/
 .hidden {
   opacity: 0;
   filter: blur(5px);
-  transform: translateX(-100%);
+  transform: translateX(-50%);
   transition: all 1s;
 }
 
@@ -238,7 +238,7 @@ h3 {
 .hidden1 {
   opacity: 0;
   filter: blur(5px);
-  transform: translateX(100%);
+  transform: translateX(50%);
   transition: all 1s;
 }
 
