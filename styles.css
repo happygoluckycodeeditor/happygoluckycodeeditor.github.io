@@ -13,6 +13,7 @@ section {
   place-items: center;
   align-content: center;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 
@@ -59,14 +60,14 @@ header {
 
 body {
   padding-top: 4em;
-    text-align: center;
-    margin: 0 auto;
-    overflow-x: hidden;
-    width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 h1, h2 {
-    font-family: 'Abel', Helvetica, sans-serif;
+  font-family: 'Abel', Helvetica, sans-serif;
 }
 
 h3 {
@@ -86,6 +87,7 @@ h3 {
 
 .flexy img {
   align-self: center;
+  overflow-x: hidden;
 }
 
 .flexy {
@@ -95,6 +97,7 @@ h3 {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  overflow-x: hidden;
 }
 
 .profile-pic {
@@ -102,7 +105,7 @@ h3 {
 }
 
 * {
-    background-color:aliceblue;
+  background-color:aliceblue;
 }
 
 .logo2 {
@@ -165,7 +168,7 @@ h3 {
 .html-project {
   padding-top: 20em;
   padding-bottom: 20em;
-  font-family: 'Abel';
+  overflow-x: hidden;
 }
 
 .html-project p {
