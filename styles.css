@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500i,900,900i');
+
 
 @media (prefers-reduced-motion: no-preference) {
   * {
@@ -15,8 +17,6 @@ section {
   min-height: 100vh;
   overflow-x: hidden;
 }
-
-
 
 * {
   padding: 0px;
@@ -74,15 +74,32 @@ h3 {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+.caret-text {
+  font-family: 'Rubik',sans-serif;
+  color: black;
+  font-size: 70px;
+}
+
+.caret-box {
+  min-height: 130px;
+  min-width: 560px;
+}
+
+#element {
+  color: brown;
+}
+
 .eng-dsc {
   max-width: 50%;
 }
 
-.flexy h2 {
+.eng-dsc {
+  padding-top: 2em;
   text-align: center;
   color: brown;
   align-self: center;
   font-weight: bold;
+  margin: 0 auto;
 }
 
 .flexy img {
@@ -91,6 +108,7 @@ h3 {
 }
 
 .flexy {
+  padding-top: 2em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

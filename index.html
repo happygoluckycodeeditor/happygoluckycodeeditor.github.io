@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tanmay's Portfolio</title>
+
+    <!--ALl the necessary imports-->
     <link rel="icon" type="image/x-icon" href="Favicon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/kokoro.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script defer src="app.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
 
 </head>
     <body class="fade-in-text" className="overflow-x-hidden">   
@@ -28,8 +32,8 @@
                 <h3>ポートフォリオサイトを作っています。工事中なので、しばらくおまちください〜</h3>
             </div>
             <div class="flexy" className="overflow-x-hidden">
-                <h2 class="eng-dsc" data-aos="fade-right">Hi my name is Tanmay. I currently live in frankfurt and I study East Asian Studies in Frankfurt! I have lived in Japan before for 2 years and I love anything related to Japan and Japanese Culture and technology!</h2>
-                <img class="profile-pic" data-aos="fade-left" src="Helloname.jpeg" alt="Tanmay's profile Picture" />
+                <div class="caret-box"><h1 id="caret-text" class="caret-text" data-aos="fade-right"> Hi I am <span class="auto-type" id="element"></span></h1></div>
+                <div><img class="profile-pic" data-aos="fade-left" src="Helloname.jpeg" alt="Tanmay's profile Picture" /></div>
             </div>
 
             <div class="jp-dsc">
@@ -42,6 +46,7 @@
                 データ分析が好きです〜
 
             </p>
+            <h2 class="eng-dsc" data-aos="fade-right">Hi my name is Tanmay. I currently live in frankfurt and I study East Asian Studies in Frankfurt! I have lived in Japan before for 2 years and I love anything related to Japan and Japanese Culture and technology!</h2>
             </div>
         </section>
 
@@ -82,6 +87,17 @@
           AOS.init({
             once: true,
           });
+        </script>
+
+        <!--Adding Caret Animation-->
+        <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed(".auto-type", {
+                strings: ["Tanmay", "タンマイ"],
+                typeSpeed: 150,
+                backSpeed: 150,
+                loop: true
+            })
         </script>
 
     </body>
