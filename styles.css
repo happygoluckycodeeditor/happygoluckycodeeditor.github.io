@@ -77,11 +77,12 @@ h3 {
 .caret-text {
   font-family: 'Rubik',sans-serif;
   color: black;
-  font-size: 70px;
+  font-size: calc(30px + 1.5vw);
+  overflow-x: auto;
 }
 
 .caret-box {
-  min-height: 130px;
+  min-height: 80px;
   min-width: 560px;
 }
 
