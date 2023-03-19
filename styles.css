@@ -163,9 +163,6 @@ h3 {
 }
 
 .html-project {
-  display: grid;
-  place-items: center;
-  align-content: center;
   padding-top: 20em;
   padding-bottom: 20em;
   font-family: 'Abel';
