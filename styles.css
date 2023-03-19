@@ -66,6 +66,11 @@ body {
   width: 100%;
 }
 
+.intro-sentence {
+  font-family: 'Rubik';
+  font-weight: light;
+}
+
 h1, h2 {
   font-family: 'Abel', Helvetica, sans-serif;
 }
@@ -95,7 +100,7 @@ h3 {
 }
 
 .eng-dsc {
-  padding-top: 2em;
+  padding-top: 2.5em;
   text-align: center;
   color: brown;
   align-self: center;
