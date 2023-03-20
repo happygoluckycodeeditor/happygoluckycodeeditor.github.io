@@ -129,7 +129,7 @@ h3 {
 }
 
 * {
-  background-color:aliceblue;
+  background-color: #F4F0E4;
 }
 
 .logo2 {
@@ -156,7 +156,7 @@ h3 {
 
 #repobutton {
   padding: 40px;
-  background-color: chocolate;
+  background-color: #E1A080;
   width: 30%;
   margin: 0 auto;
   border-radius: 30px;
@@ -164,7 +164,7 @@ h3 {
 
 
 #repobutton > a {
-  background-color: chocolate;
+  background-color: #E1A080;
 }
 
 #htmllink {
