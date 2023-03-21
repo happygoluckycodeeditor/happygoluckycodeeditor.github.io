@@ -24,9 +24,9 @@
 </head>
     <body class="fade-in-text" className="overflow-x-hidden">   
         <header class="nav-bar">
-            <h3><a href="#top">Top of Page</a></h3>
-            <h3><a href="#data-analysis-section" >Data Analysis Projects</a></h3>
-            <h3><a href="#html-project-section">Uni. Research</a></h3>
+            <div id="navitem"><h3><a href="#top">Top of Page</a></h3></div>
+            <div id="navitem"><h3><a href="#data-analysis-section" >Data Analysis Projects</a></h3></div>
+            <div id="navitem"><h3><a href="#uni-research-section">Uni. Research</a></h3></div>
         </header>
 
         <!-- Adding a section one for the intro text-->
@@ -41,7 +41,11 @@
 
             <div class="jp-dsc">
                 <div data-aos="zoom-out">
-                    <a id="htmllink" href="https://github.com/happygoluckycodeeditor"><p class="repobutton" id="repobutton">Click here to check my Github Repository!</p></a>
+                    <div class="projectbox">
+                        <a id="careerpath" href="careerpath.html">My Career Path<br>学歴＋キャリパス</a>
+                        <a id="data-analysis-project" href="#data-analysis-section">Data Analysis Projects<br>データ分析プロジェクト</a>
+                        <a id="uniresearch" href="#uni-research-section">University Research<br>大学院研究</a>
+                    </div>
                 </div>
             <p class="thanks">Thank you for visiting~</p>
             <p class="introduction">
@@ -66,7 +70,7 @@
 
         <!-- Third Section of HTML PROJECTS -->
         <section id="section-3">
-            <div class="html-project" data-aos="fade-right" id="html-project-section">
+            <div class="html-project" data-aos="fade-right" id="uni-research-section">
             <p>⚠️Currently a work in progress!</p>
             <img src="WIP2.png" alt="WIP-bunny">
             </div>
@@ -75,6 +79,8 @@
         <img src="logo2.png" class="logo2">
 
 
+        <!-- Link to the website repository-->
+        <a data-aos="zoom-out" id="htmllink" href="https://github.com/happygoluckycodeeditor/happygoluckycodeeditor.github.io">Website Source Code!</a>
 
         <!-- Footer of the page-->
         <footer class="foot">

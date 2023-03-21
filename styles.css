@@ -58,6 +58,10 @@ header {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   padding-top: 3.5em;
   text-align: center;
@@ -100,7 +104,7 @@ h3 {
 }
 
 .eng-dsc {
-  padding-top: 2.5em;
+  padding-top: 2.98em;
   text-align: center;
   color: brown;
   align-self: center;
@@ -151,29 +155,33 @@ h3 {
   margin: 0 auto;
   width: 50%;
   font-family: 'Noto Sans JP',Arial, Helvetica;
-
-}
-
-#repobutton {
-  padding: 40px;
-  background-color: #E1A080;
-  width: 30%;
-  margin: 0 auto;
-  border-radius: 30px;
 }
 
 
-#repobutton > a {
-  background-color: #E1A080;
+/* Link to all the pages */
+.projectbox {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 0 60px;
 }
 
-#htmllink {
+.projectbox a {
   color: aliceblue;
-  font-size: x-large;
-  font-family: 'Abel', sans-serif;
-  
+  background-color: #E1A080;
+  padding: 20px;
+  border-radius: 30px;
+  text-align: center;
+  font-size: large;
+  font-family: 'Abel', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.projectbox a:hover {
+  background-color: #eebda4;
+}
 
 .jp-dsc {
   padding-top: 3em;
@@ -198,6 +206,21 @@ h3 {
 .html-project p {
   font-family: 'Abel';
   font-size: xx-large;
+}
+
+#htmllink {
+  color: aliceblue;
+  font-size: x-large;
+  font-family: 'Abel', sans-serif;
+  padding: 40px;
+  background-color: #E1A080;
+  width: 30%;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
+#htmllink:hover {
+  background-color: #eebda4;
 }
 
 .foot {
