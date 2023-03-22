@@ -197,6 +197,10 @@ h3 {
   font-size: xx-large;
 }
 
+#data-analysis-section {
+  padding-top: 60px;
+}
+
 .data-a-box {
   display: flex;
   justify-content: center;
@@ -233,7 +237,7 @@ h3 {
 .html-project {
   padding-top: 20em;
   overflow-x: hidden;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 
 .html-project p {
