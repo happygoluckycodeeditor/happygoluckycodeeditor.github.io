@@ -132,3 +132,9 @@
     left: 0%;
     }
   }
+
+  .test-image {
+    align-self: center;
+    overflow-x: hidden;
+    max-width: 100%;
+  }
