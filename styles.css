@@ -185,9 +185,10 @@ h3 {
   padding-top: 3em;
 }
 
+
+/* Data Analysis Section */
 .data-analysis {
   padding-top: 20em;
-  padding-bottom: 20em;
 }
 
 .data-analysis p {
@@ -195,9 +196,33 @@ h3 {
   font-size: xx-large;
 }
 
+.data-a-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: baseline;
+  margin: 0 60px;
+  word-break: break-all;
+  padding-top: 10px;
+
+}
+
+.data-a-box a {
+  color: aliceblue;
+  background-color: #E1A080;
+  font-size: large;
+  font-family: 'Abel', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.data-a-box p {
+  padding-top: 20px;
+}
+
 .html-project {
   padding-top: 20em;
-  padding-bottom: 20em;
   overflow-x: hidden;
 }
 
@@ -215,6 +240,7 @@ h3 {
   width: 30%;
   margin: 0 auto;
   border-radius: 30px;
+  padding-top: 20px;
 }
 
 #htmllink:hover {
