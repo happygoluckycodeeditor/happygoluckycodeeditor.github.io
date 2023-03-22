@@ -85,6 +85,7 @@ h3 {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+/*Caret text */
 .caret-text {
   font-family: 'Rubik',sans-serif;
   color: black;
@@ -208,6 +209,10 @@ h3 {
 
 }
 
+.data-a-box div {
+  padding: 10px;
+}
+
 .data-a-box a {
   color: aliceblue;
   background-color: #E1A080;
@@ -219,11 +224,16 @@ h3 {
 
 .data-a-box p {
   padding-top: 20px;
+  font-family: 'Abel';
+
 }
+
+/* Uni Research Section */
 
 .html-project {
   padding-top: 20em;
   overflow-x: hidden;
+  padding-bottom: 20px;
 }
 
 .html-project p {
@@ -240,7 +250,6 @@ h3 {
   width: 30%;
   margin: 0 auto;
   border-radius: 30px;
-  padding-top: 20px;
 }
 
 #htmllink:hover {
@@ -329,3 +338,6 @@ h3 {
 .pastelBlue {
   background-color: #ffdec8;
 }
+
+
+/* CAREER PATH PAGE HERE */
