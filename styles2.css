@@ -133,8 +133,18 @@
     }
   }
 
-  .test-image {
+  /*Timeline Settings*/
+
+  .timeline {
+    font-family: 'Abel','Noto Sans JP';
+  }
+
+  .timeline-image {
     align-self: center;
     overflow-x: hidden;
     max-width: 100%;
+  }
+
+  .highlight {
+    color: chocolate;
   }
