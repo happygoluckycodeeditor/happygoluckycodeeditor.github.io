@@ -2,6 +2,13 @@
     box-sizing: border-box;
   }
 
+/* Title of the page */
+.career-path {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+
   /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
