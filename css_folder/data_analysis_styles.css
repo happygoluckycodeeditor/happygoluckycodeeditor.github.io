@@ -1,0 +1,69 @@
+body {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.tottori_title {
+    width: 80%;
+    margin: 0 auto;
+    font-family: "Verdana";
+    font-weight: normal;
+}
+
+.tottori_japan_title {
+    color: chocolate;
+    padding: 3px;
+}
+
+.data_intro {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 60px;
+    gap: 20px;
+    overflow-x: hidden;
+}
+
+
+.intro {
+    font-family: "Abel","Verdana";
+    font-size: large;
+    width: 60%;
+}
+
+.data_intro_photo {
+    height: auto;
+    max-width: 300px;
+    overflow-x: hidden;
+}
+
+.intro_desc {
+    align-items: center;
+    text-align: left;
+}
+
+.intro_div {
+    font-family: "Abel";
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#date {
+    padding-top: 5px;
+    border-bottom: 1px solid chocolate;
+}
+
+.senti_analysis_body {
+    padding-top: 10px;
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+
+
