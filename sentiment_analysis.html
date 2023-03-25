@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css_folder/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css_folder/data_analysis_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
 
 
 </head>
@@ -50,10 +51,36 @@
     <p id="date">Made on 24th March 2023</p>
     </div>
 
-    <div class="senti_analysis_body">
+    <div class="senti_analysis_question">
         <h2 id="question1" >What is Sentiment Analysis?</h2>
+        <p> According to 
+        </p>
+
 
     </div>
+
+    <pre>
+        <code>
+query = &quot;鳥取観光 until:2023-02-20 since:2022-02-20&quot;
+tweets = []
+limit = 1000
+
+for tweet in sntwitter.TwitterSearchScraper(query).get_items():
+    if len(tweets) == limit:
+        break
+    else:
+        tweets.append([tweet.date, tweet.user.username, tweet.content])
+
+df = pd.DataFrame(tweets, columns = ['Date', 'User', 'Tweet'])
+df.to_csv('tottori_tweets.csv')
+     
+        </code>
+    </pre>
+
+
+    <!-- Adding Highlight.js Script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 
 
 

@@ -1,9 +1,3 @@
-body {
-    margin: 0 auto;
-    text-align: center;
-}
-
-
 .tottori_title {
     width: 80%;
     margin: 0 auto;
@@ -58,12 +52,24 @@ body {
     border-bottom: 1px solid chocolate;
 }
 
-.senti_analysis_body {
+/* Senitment anaylsis question */
+
+.senti_analysis_question {
     padding-top: 10px;
     width: 70%;
     margin: 0 auto;
     text-align: left;
 }
 
+pre {
+    text-align: left;
+    margin: 0 auto;
+    width: 70%;
+}
+
+code {
+    border-radius: 20px;
+    font-size: smaller;
+}
 
 
