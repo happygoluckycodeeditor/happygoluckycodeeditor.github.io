@@ -88,8 +88,18 @@ code {
     padding: 10px;
 }
 
+#tottorikankoudatasetphoto {
+    max-width: 70%;
+}
+
+#tottorikankoutranslated {
+    max-width: 70%;
+}
+
+
 p#p7 {
     padding-top: 0;
-
 }
+
+
 

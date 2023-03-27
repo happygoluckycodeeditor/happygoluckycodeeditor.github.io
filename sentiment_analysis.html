@@ -116,12 +116,69 @@ df.to_csv('tottori_tweets.csv')
         </code>
     </pre>
 
-    <p class="senti_analysis_body">
+    <p class="senti_analysis_body" id="p8">
+        We check if the dataset is perfectly mined from the website using the following code
+        
+    </p>
+
+    <pre>
+        <code>
+import pandas as pd
+data = pd.read_csv("tottori_tweets.csv")
+print(data.head())
+        </code>
+    </pre>
+
+    <img src="photos/Twitter_sentiment_tottorikankou.png" alt="tottorikankoudataset" id="tottorikankoudatasetphoto">
+
+    <p class="senti_analysis_body" id="p9">
         The file will be saved in your directory
         <br>
         Now that we have our data, it is time to install Google Translate on python!
         
     </p>
+
+
+    <pre>
+        <code>
+pip install googletrans==3.1.0a0
+        </code>
+    </pre>
+
+    <p class="senti_analysis_body" id="p10">
+        It will take like a minute to install. <br>
+        ⚠️Attention! For some reason the package does not work in VSCode and always gives some error, try using Google CoLab!
+    </p>
+
+    <p class="senti_analysis_body" id="p11">
+        After installing the google translate package, we now try to translate all the tweets inside the dataset
+
+    </p>
+
+    <pre>
+        <code>
+data['English'] = data['Tweet'].apply(translator.translate, src='ja', dest='en').apply(getattr, args=('text',))
+data.to_csv('tottori_tweets_translated.csv')
+        </code>
+    </pre>
+
+    <p class="senti_analysis_body" id="p12">
+        Checking if the tweets are translated properly
+    </p>
+
+    <pre>
+        <code>
+review = pd.read_csv("tottori_tweets_translated.csv")
+print(review.head())
+        </code>
+    </pre>
+
+    <img src="photos/twitter_sentiment_tottori_translated.png" alt="tottorikankoutranslated" id="tottorikankoutranslated">
+
+    <p class="senti_analysis_body" id="p13">
+        It is now
+    </p>
+
 
 
     <!-- Adding Highlight.js Script-->
