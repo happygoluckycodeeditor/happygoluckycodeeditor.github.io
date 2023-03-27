@@ -54,11 +54,11 @@
 
 /* Senitment anaylsis question */
 
-.senti_analysis_question {
-    padding-top: 10px;
+.senti_analysis_body {
     width: 70%;
     margin: 0 auto;
     text-align: left;
+    font-family: 'Abel', sans-serif;
 }
 
 pre {
@@ -72,4 +72,24 @@ code {
     font-size: smaller;
 }
 
+/* The text of the project */
+#question1 {
+    padding-top: 15px;
+}
+
+.projectbodycontent {
+    font-family: 'Abel', sans-serif;
+    
+}
+
+#projectlist {
+    margin: 0 auto;
+    width: 70%;
+    padding: 10px;
+}
+
+p#p7 {
+    padding-top: 0;
+
+}
 

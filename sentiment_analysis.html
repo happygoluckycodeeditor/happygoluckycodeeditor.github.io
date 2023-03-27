@@ -51,13 +51,52 @@
     <p id="date">Made on 24th March 2023</p>
     </div>
 
-    <div class="senti_analysis_question">
+    <div class="senti_analysis_body">
         <h2 id="question1" >What is Sentiment Analysis?</h2>
-        <p> According to 
+        <p class="projectbodycontent" id="p1">
+            Sentiment analysis (or opinion mining) is a natural language processing (NLP) technique used to determine whether data is positive, negative or neutral. Sentiment analysis is often performed on textual data to help businesses monitor brand and product sentiment in customer feedback, and understand customer needs.
+            <br>
+            However, Sentiment analysis can be used for research purposes as well!
+            <br>
+            Lets have a look! 
         </p>
-
-
+        <p class="projectbodycontent" id="p2">
+            Japan's countryside has been struggling to get its tourism industry running and back on track
+            since the end of the pandemic. <span>What could be the case?</span>
+        </p>
+        <p class="projectbodycontent" id="p3">In this context the <a href="https://www.tottori-guide.jp/zenkokuwari-tottori/">Tottori's prefectural government</a> has put out a lot of offers to attract
+            more tourist from all over the country and even abroad, but how has the public reacted to it?
+        </p>
+        <p class="projectbodycontent" id="p4">
+            One way to find out that perception is by doing sentiment analysis using the
+            python programming language
+        </p>
+        <p class="projectbodycontent" id="p5">
+             I have tried to solve this problem through the following steps:
+             <ol class="projectbodycontent" id="projectlist">
+                <li>Data mining around a 1000 tweets from Twitter regarding the keyword: 鳥取観光</li>
+                <li>Using Google Translate packages in python to translate all the mined tweets</li>
+                <li>Use Natural Language processing packages such 'Roberta' by hugging face to perform Sentiment analysis</li>
+                <li>Visualise the result on a graph</li>
+             </ol>
+        </p>
+        <p class="projectbodycontent" id="p6">
+            So let's get started
+            <ol class="projectbodycontent" id="projectlist">
+                <li>
+                    Mining Tweets For the first step, we need some libraries installed to Mine tweets
+                </li>
+            </ol>
+        </p>
     </div>
+    <pre>
+        <code>
+import snscrape.modules.twitter as sntwitter
+import pandas as pd
+        </code>
+    </pre>
+    <p class="senti_analysis_body" id="p7">Next we mine tweets from Twitter (I have used a method where we don't need to use the twitter API!) I used the keyword '鳥取観光' to mine the 1000 tweets from all over Twitter in the span of One year from Feb 20, 2022 to Feb 20, 2023 </p>
+
 
     <pre>
         <code>
@@ -76,6 +115,13 @@ df.to_csv('tottori_tweets.csv')
      
         </code>
     </pre>
+
+    <p class="senti_analysis_body">
+        The file will be saved in your directory
+        <br>
+        Now that we have our data, it is time to install Google Translate on python!
+        
+    </p>
 
 
     <!-- Adding Highlight.js Script-->
