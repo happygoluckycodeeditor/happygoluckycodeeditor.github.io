@@ -51,24 +51,30 @@
     <p id="date">Made on 24th March 2023</p>
     </div>
 
+    <img class="tottoriimg" src="photos/Tottori.jpeg">
+
+
     <div class="senti_analysis_body">
-        <h2 id="question1" >What is Sentiment Analysis?</h2>
+        <h2 id="question1" ><span>What is Sentiment Analysis?</span></h2>
         <p class="projectbodycontent" id="p1">
             Sentiment analysis (or opinion mining) is a natural language processing (NLP) technique used to determine whether data is positive, negative or neutral. Sentiment analysis is often performed on textual data to help businesses monitor brand and product sentiment in customer feedback, and understand customer needs.
             <br>
             However, Sentiment analysis can be used for research purposes as well!
-            <br>
+            
             Lets have a look! 
         </p>
         <p class="projectbodycontent" id="p2">
             Japan's countryside has been struggling to get its tourism industry running and back on track
             since the end of the pandemic. <span>What could be the case?</span>
+
+       
+
         </p>
         <p class="projectbodycontent" id="p3">In this context the <a href="https://www.tottori-guide.jp/zenkokuwari-tottori/">Tottori's prefectural government</a> has put out a lot of offers to attract
             more tourist from all over the country and even abroad, but how has the public reacted to it?
         </p>
         <p class="projectbodycontent" id="p4">
-            One way to find out that perception is by doing sentiment analysis using the
+            One way to find out that perception is by doing <span>sentiment analysis</span> using the
             python programming language
         </p>
         <p class="projectbodycontent" id="p5">
@@ -82,11 +88,8 @@
         </p>
         <p class="projectbodycontent" id="p6">
             So let's get started
-            <ol class="projectbodycontent" id="projectlist">
-                <li>
-                    Mining Tweets For the first step, we need some libraries installed to Mine tweets
-                </li>
-            </ol>
+                <br>
+                    We wil mine tweets for the first step, we need some libraries installed to Mine tweets
         </p>
     </div>
     <pre>
@@ -129,7 +132,29 @@ print(data.head())
         </code>
     </pre>
 
-    <img src="photos/Twitter_sentiment_tottorikankou.png" alt="tottorikankoudataset" id="tottorikankoudatasetphoto">
+    <p class="senti_analysis_body">
+        The output will look like the following in the terminal
+    </p>
+
+    <pre>
+        <code>
+               Unnamed: 0                       Date           User  \
+0           0  2023-02-19 23:26:52+00:00  senryuji_hino   
+1           1  2023-02-19 17:25:52+00:00      oimo_0222   
+2           2  2023-02-19 13:16:13+00:00      hiko39115   
+3           3  2023-02-19 01:54:44+00:00     recruit_oe   
+4           4  2023-02-18 22:38:56+00:00  senryuji_hino   
+
+                                               Tweet  
+0  おはようございます\n\n本日の #泉龍寺 は曇りです\n最高気温4度・最低気温マイナス2度...  
+1  島根に住んでいる友達と\n鳥取砂丘に行きました🤍\n初鳥取観光は砂丘でした- ̗̀ ( ˶'...  
+2  【水木しげるロード】【境港夕凪の湯御宿野乃】【境港水産物直売センター】ゲゲゲに楽しい【鳥取境...  
+3  大江ノ郷自然牧場が、プロが選ぶ「観光・食事・土産物施設100選」に選ばれました✨鳥取県で唯一...  
+4  おはようございます\n\n本日の #泉龍寺 は雨です\n最高気温11度・最低気温3度\n現在...  
+        </code>
+    </pre>
+
+
 
     <p class="senti_analysis_body" id="p9">
         The file will be saved in your directory
@@ -173,7 +198,34 @@ print(review.head())
         </code>
     </pre>
 
-    <img src="photos/twitter_sentiment_tottori_translated.png" alt="tottorikankoutranslated" id="tottorikankoutranslated">
+    <p class="senti_analysis_body"> 
+        The output of the translated tweets is saved in a CSV file and will display an output in the terminal like the following:
+    </p>
+
+    <pre>
+        <code>
+               Unnamed: 0  Unnamed: 0.1                       Date           User  \
+0           0             0  2023-02-19 23:26:52+00:00  senryuji_hino   
+1           1             1  2023-02-19 17:25:52+00:00      oimo_0222   
+2           2             2  2023-02-19 13:16:13+00:00      hiko39115   
+3           3             3  2023-02-19 01:54:44+00:00     recruit_oe   
+4           4             4  2023-02-18 22:38:56+00:00  senryuji_hino   
+
+                                               Tweet  \
+0  おはようございます\n\n本日の #泉龍寺 は曇りです\n最高気温4度・最低気温マイナス2度...   
+1  島根に住んでいる友達と\n鳥取砂丘に行きました🤍\n初鳥取観光は砂丘でした- ̗̀ ( ˶'...   
+2  【水木しげるロード】【境港夕凪の湯御宿野乃】【境港水産物直売センター】ゲゲゲに楽しい【鳥取境...   
+3  大江ノ郷自然牧場が、プロが選ぶ「観光・食事・土産物施設100選」に選ばれました✨鳥取県で唯一...   
+4  おはようございます\n\n本日の #泉龍寺 は雨です\n最高気温11度・最低気温3度\n現在...   
+
+                                             English  
+0  good morning\n\n#Senryu-ji Temple is cloudy to...  
+1  With friends who live in Shimane\nI went to To...  
+2  [Mizuki Shigeru Road] [Sakaiminato Yunagi-no-Y...  
+3  Oenosato Natural Ranch was selected as one of ...  
+4  good morning\n\nIt's raining at #senryu-ji tod...  
+        </code>
+    </pre>
 
     <p class="senti_analysis_body" id="p13">
         We have successfully translated all the tweets from Japanese to english and also created a new CSV file with all the translated data in the english column. ☀️It is important to note that, since we do not translate directly and use machine translation, it might lose some level of accuracy!
@@ -272,7 +324,97 @@ pd.DataFrame(res).T.to_csv('tottori_tweets_sentiment_scores.csv')
         </code>
     </pre>
 
-    <p class="senti_analysis_body"> looks amazing</p>
+    <p class="senti_analysis_body" id="p17">The output will look like the following in terminal<br>
+        It is a set of probability score which tells if the tweet has the possibility of being Negative, Neutral or Positive</p>
+
+    <pre>
+        <code>
+                 roberta_neg  roberta_neu  roberta_pos
+senryuji_hino       0.003258     0.133745     0.862998
+oimo_0222           0.001793     0.083986     0.914221
+hiko39115           0.003020     0.187635     0.809345
+recruit_oe          0.004128     0.146394     0.849479
+mamacreamsoda       0.752883     0.196891     0.050227
+...                      ...          ...          ...
+bfziwVEEvdnhknj     0.011227     0.866529     0.122244
+KiniTabi            0.003765     0.256433     0.739802
+HENA_choco_Late     0.002621     0.042952     0.954427
+7QWJV4BLtzussqY     0.003928     0.254124     0.741948
+tera_cbr            0.130662     0.633455     0.235883
+
+[626 rows x 3 columns]
+        </code>
+    </pre>
+
+    <p class="senti_analysis_body" id="p18">
+        Now aggregating all the tweets and their scores
+    </p>
+
+    <pre>
+        <code>
+roberta_nu = data_1['roberta_neu'].mean()
+roberta_p = data_1['roberta_pos'].mean()
+
+print('Negative Sentiment Score:', roberta_n, 'Neutral Sentiment Score:', roberta_nu, 'Positive sentiment Score:', roberta_p)
+total = roberta_n + roberta_nu + roberta_p
+print('Total Score Probability:', total) 
+        </code>
+    </pre>
+
+    <p class="senti_analysis_body" id="p18">The output will look like the following in the terminal:</p>
+
+    <pre>
+        <code>
+Negative Sentiment Score: 0.06635993733833866 Neutral Sentiment Score: 0.4121005301733227 Positive sentiment Score: 0.5215395210942492
+Total Score Probability: 0.9999999886059106            
+        </code>
+    </pre>
+
+    <p class="senti_analysis_body" id="p19">The output looks good but it does not look visually pleasing or easy to understand for many people. <br>
+    We can try making a visualisation! The code for it is as follows: </p>
+
+    <pre>
+        <code>
+import matplotlib.pyplot as plt
+   
+sentiment_score = ['Negative Sentiment', 'Neutral Sentiment', 'Positive Sentiment']
+sentiment_p = [roberta_n, roberta_nu, roberta_p]
+
+plt.bar(sentiment_score, sentiment_p)
+plt.title('Sentiment Towards Tottori Tourism On Twitter')
+plt.xlabel('Type of Sentiment')
+plt.ylabel('Sentiment Probability')
+plt.show()
+        </code>
+    </pre>
+
+    <p class="senti_analysis_body" id="p20">
+        The Final Visualisation for our project will look like the following:
+    </p>
+
+    <img src="photos/tottori_kankou_graph.png" alt="TottoriKankouGraph">
+    
+    <p class="senti_analysis_body" id="p21">
+        <span id="conclusion">What do we learn here?</span><br>
+        Most of the tweets regarding Tottori's Tourism are most on the positive side. Which means that if concerend toursim boards and companies
+        in Tottori make more Ads to reach people on the internet (at least on twitter), there is a good chance that they will take it positively~~
+    </p>
+
+    <h2 id="endingphrase">Thank you so much for going through the project!</h2>
+
+<!-- Footer of the page-->
+<footer class="foot">
+    <img src="logo2.png" class="logo2">
+    <p>©Tanmay Bagwe</p>
+    <p>Thank you for visiting</p>
+    <p>Any Questions? Contact me <a href="mailto:tanmay.bagwe.tb@gmail.com">here!</a></p> 
+</footer>
+
+    
+
+
+
+
 
     <!-- Adding Highlight.js Script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
