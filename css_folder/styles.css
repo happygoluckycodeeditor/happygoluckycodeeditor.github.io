@@ -226,6 +226,10 @@ h3 {
   border-radius: 30px;
 }
 
+.data-a-box a:hover {
+  background-color: #eebda4;
+}
+
 .data-a-box p {
   padding-top: 20px;
   font-family: 'Abel';
