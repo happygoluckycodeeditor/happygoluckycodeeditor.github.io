@@ -101,8 +101,10 @@ span {
 }
 
 #p3 {
-    padding: 20px 0;
+    padding: 20px 20px;
     color: chocolate;
+    border: 1px solid chocolate;
+    overflow: visible;
 }
 
 #p4, #p5, #p6, #p7, #p8, #p9, #p10, #p11, #p12, #p13, #p14, #p15, #p16, #p17, #p18, #p19, #p20, #p21 {
@@ -141,6 +143,27 @@ p#p7 {
     padding-top: 0;
 }
 
+#endingphrase {
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+
+/* Repo button*/
+.tottorikankourepo {
+    color: aliceblue;
+    font-size: x-large;
+    font-family: 'Abel', sans-serif;
+    padding: 40px;
+    background-color: #E1A080;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.tottorikankourepo:hover {
+    background-color: #eebda4;
+}
 
 
 /* Footer logo*/
