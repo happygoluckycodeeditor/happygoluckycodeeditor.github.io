@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
     <link rel="stylesheet" href="css_folder/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="css_folder/data_analysis_styles.css">
+    <link rel="stylesheet" href="css_folder/wordcloud_styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
 
 </head>
@@ -31,6 +31,7 @@
         <div id="navitem"><h3><a href="#top">Top of Page</a></h3></div>
     </header>
 
+    
     <!--Title-->
     <h1>Here comes the Wordlcoud Project</h1>
     <h3 class="tottori_japan_title">日本語での説明はこちら</h3>
@@ -42,9 +43,45 @@
     </div>
     <div class="intro_div">
     <p class="intro_desc">
-        The current topic will look into how the netizens on Twitter feel about Tourism in Tottori and gain some insights into people's
-        tendency of looking at Tottori as a potential place for a holiday
+        The current will mine small data description from Wikipedia and make a wordcloud on the available text data. We will use Wikipedia and Worcloud Plugins to create a really nice representation of the words obtained
     </p>
+    <p class="intro_desc_jp">日本語説明</p>
+    <p id="date">Made on 1st April 2023</p>
+    </div>
+
+    
+
+    <!-- Footer of the page-->
+    <footer class="foot">
+        <img src="logo2.png" class="logo2">
+        <p>©Tanmay Bagwe</p>
+        <p>Thank you for visiting</p>
+        <p>Any Questions? Contact me <a href="mailto:tanmay.bagwe.tb@gmail.com">here!</a></p> 
+    </footer>
+
+    <!-- Adding AOS Script (Global settings)-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        once: true,
+        });
+    </script>
+
+    <!--Adding Caret Animation-->
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["Tanmay", "タンマイ"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        })
+    </script>
+    
+
+
+
+    
 
 </body>
 </html>
