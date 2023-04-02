@@ -46,4 +46,11 @@
     border-bottom: 1px solid chocolate;
 }
 
-
+/* Article Photo */
+.tottoristation {
+    padding-top: 20px;
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    object-position: center 45%;
+}
