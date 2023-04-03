@@ -52,7 +52,7 @@
     width: 100%;
     object-fit: cover;
     height: 300px;
-    object-position: center 45%;
+    object-position: center 30%;
 }
 
 /* Wordcloud body*/
@@ -70,6 +70,8 @@
     font-size: larger;
     color: chocolate;
     padding-top: 15px;
+    font-weight: 700;
+    font-size: 700;
 }
 
 .answer {
@@ -82,3 +84,58 @@
     border: 1px solid chocolate;
 }
 
+/* List of the steps*/
+.projectlist {
+    margin: 0 auto;
+    width: 60%;
+    padding: 10px;
+    color: rgb(150, 76, 24);
+}
+
+#gettingstarted > a {
+    text-decoration: underline;
+}
+
+/* Code formatting*/
+pre {
+    text-align: left;
+    margin: 0 auto;
+    width: 70%;
+}
+
+code {
+    border-radius: 20px;
+    font-size: smaller;
+}
+
+/* Output Image*/
+.japan_wordcloud {
+    border-radius: 20px;
+}
+
+/* Conclusion*/
+
+.conclusion {
+    color: chocolate;
+    padding-bottom: 0;
+}
+
+.ending {
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.wordcloud_repo {
+    color: aliceblue;
+    font-size: x-large;
+    font-family: 'Abel', sans-serif;
+    padding: 40px;
+    background-color: #E1A080;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.wordcloud_repo:hover {
+    background-color: #eebda4;
+}
