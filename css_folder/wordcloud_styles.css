@@ -2,6 +2,10 @@
     font-family: 'Abel';
 }
 
+.articletitle {
+    font-family: Verdana, 'Abel';
+    font-weight: normal;
+}
 
 /* Intro flexbox */
 .data_intro {
