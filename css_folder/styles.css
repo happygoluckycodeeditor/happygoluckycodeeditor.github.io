@@ -200,9 +200,7 @@ h3 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  align-items: baseline;
   margin: 0 60px;
-  word-break: break-all;
   padding-top: 10px;
 
 }
@@ -218,6 +216,7 @@ h3 {
   font-family: 'Abel', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   padding: 20px;
   border-radius: 30px;
+  display: inline-block;
 }
 
 .data-a-box a:hover {
@@ -225,11 +224,15 @@ h3 {
 }
 
 .data-a-box p {
-  padding-top: 20px;
+  padding-top: 5px;
   font-family: 'Abel';
 
 }
 
+.data-a-box-1, .data-a-box-2, .data-a-box-3{
+  width: 220px;
+  margin: 0 auto;
+}
 /* Uni Research Section */
 
 .html-project {
