@@ -146,8 +146,9 @@ h3 {
 .introduction {
   text-align: center;
   margin: 0 auto;
-  width: 50%;
+  width: 55%;
   font-family: 'Noto Sans JP',Arial, Helvetica;
+  font-size: medium;
 }
 
 
@@ -198,7 +199,7 @@ h3 {
   flex-wrap: wrap;
   gap: 20px;
   margin: 0 60px;
-  padding-top: 10px;
+  padding-top: 7px;
 
 }
 
@@ -222,8 +223,8 @@ h3 {
 
 .data-a-box p {
   padding-top: 5px;
-  font-family: 'Abel';
-
+  font-family: 'Noto Sans JP', 'Abel';
+  font-size: small;
 }
 
 .data-a-box-1, .data-a-box-2, .data-a-box-3{
