@@ -68,3 +68,13 @@
     font-weight: 700;
     font-size: 700;
 }
+
+.answer {
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.prediction_question {
+    padding: 20px 20px;
+    border: 1px solid chocolate;
+}
