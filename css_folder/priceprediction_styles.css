@@ -78,3 +78,11 @@
     padding: 20px 20px;
     border: 1px solid chocolate;
 }
+
+/* List of the steps*/
+.projectlist {
+    margin: 0 auto;
+    width: 60%;
+    padding: 10px;
+    color: rgb(150, 76, 24);
+}
