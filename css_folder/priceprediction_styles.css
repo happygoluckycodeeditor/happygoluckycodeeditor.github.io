@@ -1,0 +1,70 @@
+/* Intro flexbox */
+.data_intro {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 60px;
+    gap: 20px;
+    overflow-x: hidden;
+}
+
+.intro {
+    font-family: "Abel","Verdana";
+    font-size: large;
+    width: 60%;
+}
+
+.data_intro_photo {
+    height: auto;
+    max-width: 300px;
+    overflow-x: hidden;
+}
+
+/* Intro description */
+.intro_desc {
+    align-items: center;
+    text-align: left;
+}
+
+.intro_div {
+    font-family: "Abel";
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#date {
+    padding-top: 5px;
+    border-bottom: 1px solid chocolate;
+}
+
+
+/* Article Photo */
+.tottoristation {
+    padding-top: 20px;
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+    object-position: center 30%;
+}
+
+.prediction_body {
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+    font-family: 'Abel', sans-serif;
+}
+.body_padding {
+    padding: 20px 0;
+}
+
+.question {
+    font-size: larger;
+    color: chocolate;
+    padding-top: 15px;
+    font-weight: 700;
+    font-size: 700;
+}
