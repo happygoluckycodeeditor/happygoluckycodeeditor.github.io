@@ -48,7 +48,7 @@
 
     <!-- Article photo-->
 
-    <img src="photos/osaka_castle.jpeg" alt="TottoriStation Photo" class="tottoristation">
+    <img src="photos/mumbai.jpeg" alt="MumbaiStation Photo" class="tottoristation">
 
     <!-- Beginning question-->
     <h2 class="prediction_body question">What is a Regression model?</h2>
@@ -70,9 +70,31 @@
         </ol>
     </p>
 
-    <p class="prediction_body body_padding">Let's get started with first finding a suitable dataset!</p>
+    <p class="prediction_body">Let's get started with first finding a suitable dataset!</p>
 
-    <p clas="prediciton_body body_padding"></p>
+    <p class="prediction_body body_padding">I have found this suitable dataset already ready for analysis on Kaggle</p>
+    <br>
+    <a class="kaggle_dataset" href="https://www.kaggle.com/datasets/ruchi798/housing-prices-in-metropolitan-areas-of-india">Get the dataset here</a>
+    <br>
+    <br>
+    <p class="prediction_body body_padding"> I took the <span>mumbai.csv</span> and <span>delhi.csv</span> from Kaggle for this project. However, you
+    can any other dataset for this project as well!
+    </p>
+
+    <p class="prediction_body">Step one is to load the important packages for this project</p>
+
+    <pre>
+        <code>
+import pandas as pd
+import numpy as np
+import plotly.express as px
+
+data=pd.read_csv(&quot;mumbai.csv&quot;)
+print(data.head())  
+        </code>
+    </pre>
+
+
 
 
         <!-- Footer of the page-->

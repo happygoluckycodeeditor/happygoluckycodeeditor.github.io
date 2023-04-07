@@ -48,7 +48,7 @@
     width: 100%;
     object-fit: cover;
     height: 300px;
-    object-position: center 30%;
+    object-position: center 50%;
 }
 
 .prediction_body {
@@ -85,4 +85,41 @@
     width: 60%;
     padding: 10px;
     color: rgb(150, 76, 24);
+}
+
+
+/*Kaggle dataset button*/
+
+.kaggle_dataset {
+    color: aliceblue;
+    font-family: 'Abel', sans-serif;
+    padding: 30px;
+    background-color: #E1A080;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.kaggle_dataset:hover {
+    background-color: #eebda4;
+}
+
+
+
+
+
+
+
+
+
+/* Code formatting*/
+pre {
+    text-align: left;
+    margin: 0 auto;
+    width: 70%;
+}
+
+code {
+    border-radius: 20px;
+    font-size: smaller;
 }
