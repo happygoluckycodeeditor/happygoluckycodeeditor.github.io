@@ -62,7 +62,7 @@
 }
 
 .question {
-    font-size: larger;
+    font-size: x-large;
     color: chocolate;
     padding-top: 15px;
     font-weight: 700;
@@ -70,6 +70,7 @@
 }
 
 .answer {
+    font-size: medium;
     font-weight: 600;
     padding-bottom: 20px;
 }

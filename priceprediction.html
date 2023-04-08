@@ -81,7 +81,7 @@
     can any other dataset for this project as well!
     </p>
 
-    <p class="prediction_body">Step one is to load the important packages for this project</p>
+    <p class="prediction_body">Step one is to load the important packages for this project and read the CSV file in the project</p>
 
     <pre>
         <code>
@@ -94,28 +94,144 @@ print(data.head())
         </code>
     </pre>
 
+    <p class="prediction_body">Loading the body will have an output which looks like this</p>
+
+    <pre>
+        <code>
+     Price  Area  Location  No. of Bedrooms  Resale  MaintenanceStaff  \
+0  4850000   720  Kharghar                1       1                 1   
+1  4500000   600  Kharghar                1       1                 1   
+2  6700000   650  Kharghar                1       1                 1   
+3  4500000   650  Kharghar                1       1                 1   
+4  5000000   665  Kharghar                1       1                 1   
+
+   Gymnasium  SwimmingPool  LandscapedGardens  JoggingTrack  ...  \
+0          0             0                  0             0  ...   
+1          1             1                  0             1  ...   
+2          1             1                  0             1  ...   
+3          0             0                  1             0  ...   
+4          0             0                  1             0  ...   
+
+   LiftAvailable  BED  VaastuCompliant  Microwave  GolfCourse  TV  \
+0              1    0                1          0           0   0   
+1              1    0                1          0           0   0   
+2              1    0                1          0           0   0   
+3              1    1                1          0           0   0   
+4              1    0                1          0           0   0   
+
+   DiningTable  Sofa  Wardrobe  Refrigerator  
+0            0     0         0             0  
+1            0     0         0             0  
+2            0     0         0             0  
+3            0     0         1             0  
+4            0     0         0             0  
+
+[5 rows x 40 columns]
+        </code>
+    </pre>
+
+    <p class="prediction_body">The head is rather long because of the data we have for this project
+        <br>
+        We now check for the data type and the titles of every column with the following code
+    </p>
+
+    <pre>
+        <code>
+data.info()
+        </code>
+    </pre>
+
+    <p class="prediction_body">The output will info on all of the columns and all the data-types in it which looks something like this</p>
+
+<pre>
+    <code>
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 7719 entries, 0 to 7718
+Data columns (total 40 columns):
+ #   Column               Non-Null Count  Dtype 
+---  ------               --------------  ----- 
+ 0   Price                7719 non-null   int64 
+ 1   Area                 7719 non-null   int64 
+ 2   Location             7719 non-null   object
+ 3   No. of Bedrooms      7719 non-null   int64 
+ 4   Resale               7719 non-null   int64 
+ 5   MaintenanceStaff     7719 non-null   int64 
+ 6   Gymnasium            7719 non-null   int64 
+ 7   SwimmingPool         7719 non-null   int64 
+ 8   LandscapedGardens    7719 non-null   int64 
+    </code>
+</pre>
+
+    <p class="prediction_body">
+        Next we check the values and their ranges
+    </p>
+
+    <pre>
+        <code>
+data.describe()
+        </code>
+    </pre>
+
+    <p class="prediction_body">The output will describe the values such as the Max value, Minimum Value, Mean and much more
+    </p>
+
+    <pre>
+        <code>
+            Price	Area	No. of Bedrooms	Resale	MaintenanceStaff	Gymnasium	SwimmingPool	LandscapedGardens	JoggingTrack	RainWaterHarvesting	...	LiftAvailable	BED	VaastuCompliant	Microwave	GolfCourse	TV	DiningTable	Sofa	Wardrobe	Refrigerator
+count	7.719000e+03	7719.000000	7719.000000	7719.000000	7719.000000	7719.000000	7719.000000	7719.000000	7719.000000	7719.000000	...	7719.000000	7719.000000	7719.000000	7719.000000	7719.000000	7719.000000	7719.000000	7719.000000	7719.000000	7719.000000
+mean	1.506165e+07	998.409250	1.913331	0.647105	7.498899	7.473896	7.437881	7.441638	7.439435	7.477005	...	7.518331	7.417930	7.454722	7.372069	7.379712	7.379065	7.373624	7.374530	7.383988	7.374789
+std	2.052100e+07	550.967809	0.855376	0.477901	3.197923	3.252095	3.328245	3.320401	3.325002	3.245418	...	3.155041	3.369523	3.292904	3.462108	3.446892	3.448185	3.459020	3.457217	3.438345	3.456702
+min	2.000000e+06	200.000000	1.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	...	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000
+25%	5.300000e+06	650.000000	1.000000	0.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	...	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000
+50%	9.500000e+06	900.000000	2.000000	1.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	...	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000
+75%	1.700000e+07	1177.000000	2.000000	1.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	...	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000
+max	4.200000e+08	8511.000000	7.000000	1.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	...	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000	9.000000
+8 rows &times; 39 columns
+        </code>
+    </pre>
+
+    <p class="prediction_body">It is time to load all the machine learning related libraries</p>
+
+    <pre>
+        <code>
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression, Ridge
+from sklearn.metrics import mean_absolute_error
+from sklearn.impute import SimpleImputer
+from sklearn.pipeline import make_pipeline
+from ipywidgets import IntSlider, interact
+from glob import glob
+        </code>
+    </pre>
+
+    <p class="prediction_body">This </p>
 
 
 
-        <!-- Footer of the page-->
-        <footer class="foot">
-            <img src="logo2.png" class="logo2">
-            <p>©Tanmay Bagwe</p>
-            <p>Thank you for visiting</p>
-            <p>Any Questions? Contact me <a href="mailto:tanmay.bagwe.tb@gmail.com">here!</a></p> 
-        </footer>
-    
-        <!-- Adding AOS Script (Global settings)-->
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init({
-            once: true,
-            });
-        </script>
-    
-        <!-- Adding Highlight.js Script-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script>
+
+
+
+
+    <!-- Footer of the page-->
+    <footer class="foot">
+        <img src="logo2.png" class="logo2">
+        <p>©Tanmay Bagwe</p>
+        <p>Thank you for visiting</p>
+        <p>Any Questions? Contact me <a href="mailto:tanmay.bagwe.tb@gmail.com">here!</a></p> 
+    </footer>
+
+    <!-- Adding AOS Script (Global settings)-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        once: true,
+        });
+    </script>
+
+    <!-- Adding Highlight.js Script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     
 </body>
 </html>
