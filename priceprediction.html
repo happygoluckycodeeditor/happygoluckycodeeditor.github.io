@@ -205,7 +205,153 @@ from glob import glob
         </code>
     </pre>
 
-    <p class="prediction_body">This </p>
+    <p class="prediction_body">We will clean the data and clear all the NULL values from the dataset and </p>
+
+    <pre>
+        <code>
+data.replace(9, np.nan, inplace=True)
+data.dropna(inplace=True)
+data.isnull().sum()/len(data)*100
+        </code>
+    </pre>
+
+    <p class="prediction_body">We will do some additional clean and check for the correlation between the values</p>
+
+    <pre>
+        <code>
+#Removing values which do not have a numberical value
+number_columns = data.select_dtypes(exclude='object')
+
+#Checking correlations between the values
+number_columns.corr()
+        </code>
+    </pre>
+
+    <p class="prediction_body">The output will look something like this, all the variables being checked for correlation against the other variable</p>
+
+    <img src="photos/Correlation.png" alt="correlation_graph_table.png" class="prediction_body imageforarticle">
+
+    <p class="prediction_body">Find the whole table in the Jupyter of the project <a href="https://github.com/happygoluckycodeeditor/pricepredictionmodel/blob/main/pricepredictionmodel.ipynb">here</a></p>
+
+    <p class="prediction_body">It is little difficult to figure out which variables are worth considering for the analysis, we can thus create a visualisation to feel the aspect of correlation more effectively.
+        Let's create a heat map.
+    </p>
+
+    <pre>
+        <code>
+numbers_correlation = number_columns.corr()
+plt.figure(figsize=(40,32))
+sns.heatmap(numbers_correlation, annot=True, square=True)
+        </code>
+    </pre>
+
+    <p class="prediction_body">The output will create a beautiful visualisation which looks like this</p>
+
+    <img src="photos/correlation_heatmap.png" alt="correlation_heatmap_prediction_analysis" class="prediction_body imageforarticle">
+
+    <p class="prediction_body">We can see that variable Prices V/s Area has a relatively good correlation, thus we can do linear regression against these values and check how they plot on a graph</p>
+    
+
+    <p class="prediction_body"><span>Usually a correlation of 60% might not be a good indicator of a good correlation, but for this project, this is the only available option</span></p>
+
+    <p class="prediction_body body_padding">Let's plot all the values of Price V/s Area</p>
+
+    <pre>
+        <code>
+plt.scatter(x = data['Price'], y = data['Area'])
+plt.xlabel('Price of a property')
+plt.ylabel('Area of the property')
+plt.title('Mumbai, India: Price v/s Area')
+        </code>
+    </pre>
+
+    <p class="prediction_body">The resulting plot will look like this:</p>
+
+    <img src="photos/price_vs_area_1.png" alt="price_vs_area_1" class="prediction_body imageforarticle correl_1">
+
+    <p class="prediction_body">Let's do regression analysis and plot the most suitable line</p>
+
+    <pre>
+        <code>
+sns.regplot(x = data['Price'], y = data['Area'])
+plt.xlabel('Price of a property')
+plt.ylabel('Area of the property')
+plt.title('Mumbai, India: Price v/s Area')
+        </code>
+    </pre>
+
+    <p class="prediction_body">Resuting Graph will look something like this</p>
+
+    <img src="photos/price_vs_area_2.png" alt="price_vs_area_2" class="prediction_body imageforarticle correl_1">
+
+    <p class="prediction_body">Now let us remove some outliers, so the plot can does not get affected by them</p>
+
+    <pre>
+        <code>
+normal_house_range = data[&quot;Price&quot;]&lt; 100000000
+#Seperate those values and visualise them on the scatterplot
+
+sns.scatterplot(x = data['Price'], y = data['Area'], hue = normal_house_range)
+plt.xlabel('Price of the property')
+plt.ylabel('Area of the property')
+plt.title('Mumbai, India: Price v/s Area')
+        </code>
+    </pre>
+
+    <p class="prediction_body">Resulting graph will look something like this</p>
+
+    <img src="photos/price_vs_area_3.png" alt="price_vs_area_3" class="prediction_body imageforarticle correl_1">
+
+    <p class="prediction_body">Now let's train a model and define a baseline for the data! Anything or any value below the baseline can be considered as not reliable
+    </p>
+
+    <pre>
+        <code>
+#Removing the outliers and revising the dataset
+data = data[normal_house_range]
+
+# 'Price' as the target of the prediction
+target = &quot;Price&quot;
+
+# 'Area' as the feature of the prediction
+feature = ['Area']
+X_train = data[feature]
+y_train = data[target]
+
+y_mean = y_train.mean()
+y_pred_baseline = [y_mean] * len(y_train)
+
+len(y_pred_baseline) == len(y_train)
+
+plt.plot( X_train.values, y_pred_baseline, color=&quot;red&quot;)
+plt.scatter(x = X_train, y = y_train)
+plt.xlabel(&quot;Area of the property&quot;)
+plt.ylabel(&quot;Price of the property&quot;)
+plt.title(&quot;Mumbai, India: Price v/s Area&quot;)
+        </code>
+    </pre>
+
+    <p class="prediction_body">The resulting body will look something like this:</p>
+
+    <img src="photos/price_vs_area_4.png" alt="price_vs_area_4" class="prediction_body imageforarticle correl_1">
+
+    <p class="prediction_body">We need to check if our values are reliable. One way is to check for mean prediction error</p>
+
+    <pre>
+        <code>
+mae_baseline = mean_absolute_error(y_train, y_pred_baseline)
+print(&quot;Mean Apartment Price:&quot;, round(y_mean, 2))
+print(&quot;Baseline MAE:&quot;, round(mae_baseline, 2))
+        </code>
+    </pre>
+
+    <p class="prediction_body">The output looks something like this:</p>
+
+    <p class="prediction_body prediction_question body_padding">
+        Mean Apartment Price: 13451545.18 <br>
+Baseline MAE: 8324779.64
+    </p>
+    
 
 
 

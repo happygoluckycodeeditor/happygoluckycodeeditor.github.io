@@ -1,3 +1,10 @@
+/* Global settings*/
+span {
+    color: chocolate;
+}
+
+
+
 /* Intro flexbox */
 .data_intro {
     padding-top: 30px;
@@ -89,6 +96,12 @@
 }
 
 
+/* Output Image*/
+.imageforarticle {
+    border-radius: 20px;
+    padding: 10px;
+}
+
 /*Kaggle dataset button*/
 
 .kaggle_dataset {
@@ -105,6 +118,11 @@
     background-color: #eebda4;
 }
 
+/*Correlation Graphs*/
+
+.correl_1 {
+    max-width: 30%;
+}
 
 
 
