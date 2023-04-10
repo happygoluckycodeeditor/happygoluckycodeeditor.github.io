@@ -10,6 +10,16 @@
 }
 
 
+/* 3D images Spline*/
+
+.image_3d {
+  margin: 0 auto;
+  width: 350px;
+  height: 350px;
+  align-items: center;
+  text-align: center;
+}
+
 section {
   display: grid;
   place-items: center;
@@ -186,7 +196,9 @@ h3 {
 
 .data-analysis p {
   font-family: 'Abel';
-  font-size: xx-large;
+  font-size: x-large;
+  margin: 0 auto !important; 
+  max-width: 60%;
 }
 
 #data-analysis-section {
@@ -352,5 +364,3 @@ h3 {
   background-color: #ffdec8;
 }
 
-
-/* CAREER PATH PAGE HERE */
