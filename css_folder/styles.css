@@ -16,6 +16,7 @@
   margin: 0 auto;
   width: 350px;
   height: 350px;
+  min-width: 80%;
   align-items: center;
   text-align: center;
 }
