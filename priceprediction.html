@@ -352,6 +352,76 @@ print(&quot;Baseline MAE:&quot;, round(mae_baseline, 2))
 Baseline MAE: 8324779.64
     </p>
 
+    <p class="prediction_body">We will now train the machine learning model</p>
+
+    <pre>
+        <code>
+#Buidling a machine learning model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+#Training the model
+y_pred_training = model.predict(X_train)
+y_pred_training[:5]
+
+#Checking the MAE for the training Model
+mae_training = mean_absolute_error(y_train, y_pred_training)
+print("Trainng MAE:", round(mae_training, 2))
+        </code>
+    </pre>
+
+    <p class="prediction_body prediction_question body_padding">
+        The training MAE will look like this: <br>
+        Trainng MAE: 5566140.1
+    </p>
+
+    <p class="prediction_body body_padding">The model is ready, and looks relatively good. We will now use this model on a target dataset and check for our equations. In this case
+        we will use the <span>Delhi.csv</span>
+    </p>
+
+    <pre>
+        <code>
+delhi = pd.read_csv(&quot;Delhi.csv&quot;)
+X_test = delhi[['Area']]
+y_pred_test = pd.Series(model.predict(X_test))
+y_pred_test.head()
+        </code>
+    </pre>
+
+    <p class="prediction_body">We now check for the intercept and coefficient</p>
+
+    <pre>
+        <code>
+intercept = round(model.intercept_, 2)
+print(&quot;Model intercept:&quot;, intercept)
+
+coefficient = round(model.coef_[0], 2)
+print('Model coefficient for &quot;area&quot;:', coefficient)
+        </code>
+    </pre>
+
+    <p class="prediction_body body_padding">The Model coefficient for "area": 16015.84 and the Model intercept: -3383620.23
+        <br>
+        That will give us the equation for the linear regression as:
+    </p>
+
+    <p class="prediction_body prediction_question body_padding">
+        apartment_price = -3383620.23 + 16015.84 * area
+    </p>
+
+    <p class="prediction_body">Plotting the data for the city of Delhi along with the line will look something like this:</p>
+
+    <img src="photos/price_vs_area_5.png" alt="price_vs_area_5" class="prediction_body imageforarticle correl_1">
+
+    <p class="prediction_body body_padding">With the help of the Eqauation up above, we can also create a creative slider and use it to create Interactive app which can predict house prices
+        <br>
+        You can find the script for creating a Python App in the project Files!
+    </p>
+
+    <h2 class="ending">Thank you very much for going through the project!</h2>
+
+    <a href="https://github.com/happygoluckycodeeditor/pricepredictionmodel" class="priceprediction_repo">Check project files</a>
+
     <!-- Footer of the page-->
     <footer class="foot">
         <img src="logo2.png" class="logo2">

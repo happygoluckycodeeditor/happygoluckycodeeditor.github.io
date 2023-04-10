@@ -121,10 +121,33 @@ span {
 /*Correlation Graphs*/
 
 .correl_1 {
-    max-width: 30%;
+    max-width: 50%;
 }
 
 
+/*Ending of the project*/
+
+.ending {
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+/*Repo button*/
+
+.priceprediction_repo {
+    color: aliceblue;
+    font-size: x-large;
+    font-family: 'Abel', sans-serif;
+    padding: 40px;
+    background-color: #E1A080;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.priceprediction_repo:hover {
+    background-color: #eebda4;
+}
 
 
 
