@@ -240,7 +240,7 @@ h3 {
   font-size: small;
 }
 
-.data-a-box-1, .data-a-box-2, .data-a-box-3{
+.data-a-box-1, .data-a-box-2, .data-a-box-3, .data-a-box-4{
   width: 220px;
   margin: 0 auto;
 }
@@ -258,6 +258,10 @@ h3 {
 .html-project p {
   font-family: 'Abel';
   font-size: xx-large;
+}
+
+.uni-research {
+  padding-bottom: 70px;
 }
 
 #htmllink {
