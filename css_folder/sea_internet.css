@@ -1,0 +1,29 @@
+.photoflexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+body {
+    padding-top: 0;
+}
+
+/* When the flexbox becomes mobile like, add padding to body*/
+
+.title {
+    text-align: center;
+}
+
+h1 {
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.article_photo {
+    object-fit: cover;
+    width: 50%;
+    height: 500px;
+    object-position: center 50%;
+}
