@@ -1,12 +1,5 @@
-.photoflexbox {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-}
-
 body {
-    padding-top: 0;
+    padding-top: 20px;
 }
 
 /* When the flexbox becomes mobile like, add padding to body*/
@@ -21,9 +14,27 @@ h1 {
     margin: 0 auto;
 }
 
-.article_photo {
+.textoverphoto {
+    position: relative;
+    text-align: center;
+    color: white;
+
+}
+
+.centeredphoto {
+    width: 100%;
     object-fit: cover;
-    width: 50%;
-    height: 500px;
-    object-position: center 50%;
+    height: 300px;
+    object-position: center 60%;
+    filter: brightness(60%);
+}
+
+.centered {
+    font-family: 'Rubik';
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

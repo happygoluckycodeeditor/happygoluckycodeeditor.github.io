@@ -27,12 +27,16 @@
         <div id="navitem"><h3><a href="index.html">Home</a></h3></div>
         <div id="navitem"><h3><a href="#top">Top of Page</a></h3></div>
     </header>
+    
 
-    <!--Flex box with image-->
-    <div class="photoflexbox">
-        <h1 class="title">South East and the Advent of the internet</h1>
-        <img src="photos/sea_sample_image.jpeg" alt="sea_sample_image" class="article_photo">
+    <!--Title image of the article-->
+    <div class="textoverphoto">
+        <img src="photos/sea_sample_image.jpeg" alt="sea_sample" class="centeredphoto">
+        <div class="centered">South East Asia and the Advent of the internet</div>
     </div>
+
+
+
 
     <h2 class="tottori_title">Twitter Sentiment Analysis On Python to find out the sentiment of people in Japan in regards to the 'Tourism in Tottori'</h2>
     <h3 class="tottori_japan_title">日本語での説明はこちら</h3>
@@ -41,6 +45,27 @@
     <h1>Work in progress SEA internet Linear Regression analysis</h1>
     <img src="WIP1.png" alt="WIP-cat">
 
+
+    <!-- Footer of the page-->
+    <footer class="foot">
+        <img src="logo2.png" class="logo2">
+        <p>©Tanmay Bagwe</p>
+        <p>Thank you for visiting</p>
+        <p>Any Questions? Contact me <a href="mailto:tanmay.bagwe.tb@gmail.com">here!</a></p> 
+    </footer>
+
+    <!-- Adding AOS Script (Global settings)-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        once: true,
+        });
+    </script>
+
+    <!-- Adding Highlight.js Script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    
 
 
 </body>
