@@ -1,19 +1,26 @@
+/* Global settings*/
+span {
+    color: chocolate;
+}
+
 body {
     padding-top: 20px;
 }
 
+
+
 /* When the flexbox becomes mobile like, add padding to body*/
 
-.title {
-    text-align: center;
-}
 
-h1 {
+.term_paper_title {
     justify-content: center;
     text-align: center;
     margin: 0 auto;
+    font-family: 'Rubik','Noto Sans JP';
+    font-weight: lighter;
 }
 
+/*Photo with text*/
 .textoverphoto {
     position: relative;
     text-align: center;
@@ -21,11 +28,12 @@ h1 {
 
 }
 
+
 .centeredphoto {
     width: 100%;
     object-fit: cover;
     height: 300px;
-    object-position: center 60%;
+    object-position: center 40%;
     filter: brightness(60%);
 }
 
@@ -37,4 +45,14 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.prediction_body {
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+    font-family: 'Abel', sans-serif;
+}
+.body_padding {
+    padding: 20px 0;
 }
