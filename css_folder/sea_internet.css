@@ -47,7 +47,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.prediction_body {
+.sea_body {
     width: 70%;
     margin: 0 auto;
     text-align: left;
@@ -55,4 +55,8 @@ body {
 }
 .body_padding {
     padding: 20px 0;
+}
+
+.underline {
+    border-bottom: 1px solid chocolate;
 }
