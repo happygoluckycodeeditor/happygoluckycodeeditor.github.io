@@ -60,3 +60,100 @@ body {
 .underline {
     border-bottom: 1px solid chocolate;
 }
+
+/*Text and Image flexbox*/
+.text_and_image {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: normal;
+    gap: 20px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.flex_text {
+    text-align: left;
+    justify-content: center;
+    width: 50%;
+}
+
+.flex_photo {
+    height: auto;
+    overflow-x: hidden;
+}
+
+
+@media screen and (max-width: 600px) {
+    .flex_text {
+        width: 100%;
+    }
+
+    .text_and_image {
+        flex-wrap: wrap;
+    }
+}
+
+/* List of the steps*/
+.projectlist {
+    margin: 0 auto;
+    width: 60%;
+    padding: 10px;
+    color: rgb(150, 76, 24);
+}
+
+/* List of graphs*/
+
+.data_intro {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 60px;
+    gap: 20px;
+    overflow-x: hidden;
+}
+
+.intro {
+    font-family: "Abel","Verdana";
+    font-size: large;
+    width: 60%;
+}
+
+.data_intro_photo {
+    height: auto;
+    max-width: 300px;
+    overflow-x: hidden;
+}
+
+/*Table*/
+
+table {
+    font-family: 'Abel', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+
+/*Image*/
+.imageforarticle {
+    width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .imageforarticle {
+        width: 100%;
+    }
+}
