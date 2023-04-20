@@ -214,7 +214,7 @@ table {
 
   .img2 {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     object-fit: contain;
     border-radius: 10px;
   }
