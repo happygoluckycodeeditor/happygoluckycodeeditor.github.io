@@ -195,16 +195,18 @@ h3 {
 
 /* Data Analysis Section */
 
+
 .data-analysis p {
   font-family: 'Rubik','Abel';
   font-size: x-large;
   margin: 0 auto !important; 
-  max-width: 60%;
 }
+
 
 .data_analysis_project_title {
   font-weight: 300;
 }
+
 
 #data-analysis-section {
   padding-top: 60px;
