@@ -192,6 +192,12 @@ h3 {
   padding-top: 3em;
 }
 
+/*Images Section*/
+
+.img_section {
+  max-width: 80% !important;
+  height: auto;
+}
 
 /* Data Analysis Section */
 
@@ -204,7 +210,7 @@ h3 {
 
 
 .data_analysis_project_title {
-  font-weight: 300;
+  font-family: 'Rubik', 'Abel' !important;
 }
 
 
