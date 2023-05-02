@@ -61,6 +61,12 @@ body {
     border-bottom: 1px solid chocolate;
 }
 
+/*Padding CSS*/
+
+.upper_pad {
+    padding-top: 20px;
+}
+
 /*Text and Image flexbox*/
 .text_and_image {
     display: flex;
