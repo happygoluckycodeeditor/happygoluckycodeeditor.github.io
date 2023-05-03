@@ -68,6 +68,54 @@
 
     <p class="sea_body upper_pad">The paper tries to answer the research question through the method of sentiment analysis using Natural language processing methods in Python to process the public sentiment of Malaysians towards the concept of 'Industry 4.0' </p>
 
+    <h2 class="sea_body underline upper_pad"><span>Method</span></h2>
+    <p class="sea_body body_padding">The paper discusses sentiment analysis in Python programming language as a way to identify the emotional tone behind a body of text. It helps organizations categorize opinions about their products, services, or ideas using data mining, machine learning, and artificial intelligence. Sentiment analysis is used in product analysis, marketing research, and social media monitoring to understand the social sentiment of their brand or product. The algorithm identifies, extracts, and quantifies the emotional tone behind a body of text.</p>
+
+    <p class="sea_body">For a dataset to perform Sentiment analysis, the paper mines/scrapes data off of Twitter with a search query which states 'Industry 4.0 in Malaysia'. The Code is as follows:</p>
+
+    <pre class="sea_body">
+        <code>
+import snscrape.modules.twitter as sntwitter
+import pandas as pd
+
+query = &quot;Malaysia Industry 4.0 until:2022-06-01 since:2015-01-01&quot;
+tweets = []
+limit = 5000
+
+for tweet in sntwitter.TwitterSearchScraper(query).get_items():
+
+    #print(vars(tweet))
+    #break
+
+    if len(tweets) == limit:
+        break
+    else:
+        tweets.append([tweet.date, tweet.user.username, tweet.content])
+
+df = pd.DataFrame(tweets, columns=['Date', 'User', 'Tweet'])
+
+df.to_csv('Malaysia Tweets.csv')
+        </code>
+    </pre>
+
+    <p class="sea_body">The code raised above will give us tweets dataset from 2022 to 2015 in relation to 'Malaysia Industry 4.0'</p>
+
+    <p class="sea_body">The dataset will look something like this:
+    </p>
+
+    <pre class="sea_body">
+        <code>
+0	2022-05-30 09:11:42+00:00	SkillstoProsper	In Malaysia, S4P improves the quality, equity and relevance of skills and technical and vocational education and training (TVET) systems to improve youth employability prospects in the era of industry 4.0, through inclusive industry-led training.
+1	2022-05-05 02:05:48+00:00	OfficialMIDA	In light of the speedy growth of Industry 4.0 technologies in the region, Malaysia&rsquo;s logistics industry is well-positioned to capitalize on the evolving digital landscape. https://t.co/sJjHzXvxlm
+2	2022-04-25 06:48:04+00:00	InvestKL	#Malaysia is gaining repute as a leading Asia-Pacific country in its readiness to adopt Industry 4.0 #technology, with a strong potential to adopt #robotics #automation. Some world-leading #MNCs have established their regional operations centre in Greater #KualaLumpur. https://t.co/UZ4om4Qx3R
+3	2022-03-30 01:08:18+00:00	DhlExpressMY	JETRO is 🤝collaborating with government agencies and Japanese companies to ☝️accelerate adoption of Japanese Industry 4.0 🏭 #smartmanufacturing technologies among Malaysian SMEs, as part of the Look East Policy (LEP) cooperation. https://t.co/3M9mtHUymT #malaysia #smemalaysia
+4	2022-03-14 13:25:12+00:00	Dr_Nur_Mazlini	Infographic: Is Malaysia Ready for Industry 4.0? | Manufacturing - Solidiance https://t.co/KksxvCJWDP via @
+5	2022-03-09 08:58:44+00:00	MITIMalaysia	It complements existing and upcoming national blueprints including the 12th Malaysia Plan, Shared Prosperity Vision 2030 Plan, National Policy on Industry 4.0 (Industry4WRD), as well as the upcoming New Industrial Masterplan. @AzminAli @limbanhong @lokmanhakim_ali #NIA #NIP
+        </code>
+    </pre>
+
+    <p class="sea_body"></p>
+
 
 
 

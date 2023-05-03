@@ -7,6 +7,9 @@ body {
     padding-top: 20px;
 }
 
+code {
+    border-radius: 20px;
+}
 
 
 /* When the flexbox becomes mobile like, add padding to body*/
