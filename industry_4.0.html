@@ -116,8 +116,123 @@ df.to_csv('Malaysia Tweets.csv')
 
     <p class="sea_body">The next step is to conduct Sentiment Analysis with the dataset</p>
 
-    <p class="sea_body">
+    <p class="sea_body body_padding">Sentiment analysis is done by using a pre-trained model, which is loaded using Transformers package in python and then used 
+        to create sentiment scores for the whole dataset
     </p>
+
+    <p class="sea_body">The code to do sentiment analysis is as follows:</p>
+
+    <pre class="sea_body">
+        <code>
+from cgitb import text
+import csv
+import pandas as pd
+import nltk
+import numpy as np
+from transformers import AutoTokenizer
+from transformers import AutoModelForSequenceClassification
+from scipy.special import softmax
+from tqdm.notebook import tqdm
+from nltk.sentiment import SentimentIntensityAnalyzer
+
+
+df = pd.read_csv(&quot;Malaysia Tweets.csv&quot;)
+example = df['Tweet'][50]
+
+MODEL = f&quot;cardiffnlp/twitter-roberta-base-sentiment&quot;
+tokenizer = AutoTokenizer.from_pretrained(MODEL)
+model = AutoModelForSequenceClassification.from_pretrained(MODEL)
+
+#Running example on ROBERTA
+encoded_text = tokenizer(example, return_tensors='pt')
+output = model(**encoded_text)
+scores = output[0][0].detach().numpy()
+scores = softmax(scores)
+scores_dict = {
+    'Roberta_Neg' : scores[0],
+    'Roberta_Neu' : scores[1],
+    'Roberta_Pos' : scores[2]
+}
+
+def polarity_scores_roberta(example):
+    encoded_text = tokenizer(example, return_tensors='pt')
+    output = model(**encoded_text)
+    scores = output[0][0].detach().numpy()
+    scores = softmax(scores)
+    scores_dict = {
+        'roberta_neg' : scores[0],
+        'roberta_neu' : scores[1],
+        'roberta_pos' : scores[2]
+    }
+    return scores_dict
+
+#Whole Data set on ROBERTA
+res = {}
+for i, row in tqdm(df.iterrows(), total=len(df)):
+    text = row['Tweet']
+    myid = row['User']
+    #roberta_result = polarity_scores_roberta(text)
+    res[myid] = polarity_scores_roberta(text)
+
+print(pd.DataFrame(res).T)
+pd.DataFrame(res).T.to_csv('Malaysia Sentiment ROBERTA.csv')
+  
+        </code>
+    </pre>
+
+
+<p class="sea_body">The overall result will gives us the sentiment scores of all the tweets in the dataset and then will give us the following result:</p>
+
+<table class="sea_body body_padding upper_pad">
+    <tr>
+        <td colspan="4">Figure 2 Overall Sentiment Score for all the tweets collected on Malaysia Industry 4.0</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>&#39;roberta neg&#39; Indicates the negative sentiment probability of the tweets</td>
+        <td>&#39;roberta neu Indicates the neutral sentiment probability of the tweets</td>
+        <td>&#39;roberta_pos&#39; Indicates the positive sentiment of the tweets</td>
+    </tr>
+    <tr>
+        <td>The overall sentiment of all the tweets</td>
+        <td>0.074194</td>
+        <td>0.607835</td>
+        <td>0.317971</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>7.42%</td>
+        <td>60.78%</td>
+        <td>31.79%</td>
+    </tr>
+    <tr>
+        <td colspan="4">Total number of tweets: 702</td>
+    </tr>
+</table>
+
+    <p class="sea_body body_padding">The results convey that most of the tweets in the dataset are Neutral Positive towards the concept of 'Industry 4.0 in Malaysia'</p>
+
+    <h2 class="sea_body underline"><span>Results and discussion</span></h2>
+    <p class="sea_body upper_pad">The results conclude that most of the tweets and their contents towards Malaysia 
+        Industry 4.0 have been neutral to positive. The negative probability of all the tweets is 
+        as low as 7.42%, which indicates that most Twitter accounts do not think of this 
+        Industry 4.0 in Malaysia as a flawed initiative. The total probability score of Neutral-Positive sentiment is about 92.57%, which is a very optimistic score for the initiative 
+        in Malaysia.       
+    </p>
+
+    <p class="sea_body upper_pad">The paper’s analysis infers that most of the public’s sentiment towards the initiative 
+        of Industry 4.0 in Malaysia is likely Neutral-positive on the social media platform 
+        Twitter. The result infers that on social media, at least twitter in general, users from 
+        around the world look at Malaysia’s Industry 4.0 attempt with a relatively good 
+        optimism and the public opinion might not necessarily create any hindrance in the 
+        enactment of the policy.</p>
+
+
+    <h2 class="sea_body body_padding" style="text-align: center;">Thank you so much for going through the Project!</h2>
+    <h3 class="sea_body body_padding" style="text-align: center; padding-bottom: 60px;">This term paper was submitted as a course requirement for my Master's Seminar at Goethe University Frankfurt, Germany</h3>
+
+    <a class="link_button" href="https://github.com/happygoluckycodeeditor/senti-analysis-malaysia">Check Project files</a>
+
 
 
 

@@ -240,3 +240,14 @@ table {
     text-align: center;
     
   }
+
+.link_button {
+    color: aliceblue;
+    font-size: x-large;
+    font-family: 'Abel', sans-serif;
+    padding: 40px;
+    background-color: #E1A080;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 30px;
+}
