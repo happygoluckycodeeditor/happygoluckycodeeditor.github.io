@@ -60,6 +60,7 @@ code {
     padding: 20px 0;
 }
 
+
 .underline {
     border-bottom: 1px solid chocolate;
 }
@@ -68,6 +69,10 @@ code {
 
 .upper_pad {
     padding-top: 20px;
+}
+
+.lower_pad {
+    padding-bottom: 20px;
 }
 
 /*Text and Image flexbox*/
