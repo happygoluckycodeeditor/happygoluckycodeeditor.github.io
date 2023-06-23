@@ -23,8 +23,47 @@
 <script defer src="app.js"></script>
 </head>
 <body>
-    <h1 class="sea_body" style="text-align: center !important;">The figma App comes here</h1>
+    <!-- NAV BAR-->
+    <header class="nav-bar">
+        <div id="navitem"><h3><a href="index.html">Home</a></h3></div>
+        <div id="navitem"><h3><a href="#top">Top of Page</a></h3></div>
+    </header>
+
+
+    <!--Title of the Page-->
+    <h1 class="sea_body term_paper_title" style="text-align: center !important; padding-bottom: 35px; padding-top: 35px;">Welcome to my Figma App!</h1>
+    
+    <!--The figma app comes here-->
     <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FIPIi4kFbS8sbB2hRgmXngp%2FHackathon-Prototype%3Ftype%3Ddesign%26node-id%3D12-648%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D12%253A648" allowfullscreen></iframe>
+
+
+
+    <!-- Footer of the page-->
+    <footer class="foot">
+        <img src="photos/logo2.png" class="logo2">
+        <p>©Tanmay Bagwe</p>
+        <p>Thank you for visiting</p>
+        <p>Any Questions? Contact me <a href="mailto:tanmay.bagwe.tb@gmail.com">here!</a></p> 
+    </footer>
+
+    <!-- Adding AOS Script (Global settings)-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        once: true,
+        });
+    </script>
+
+    <!-- Adding Highlight.js Script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    
+    <!--Adding Chart.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+
+
+
 
 
 </body>
