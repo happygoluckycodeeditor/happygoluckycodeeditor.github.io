@@ -74,7 +74,7 @@ a {
 }
 
 body {
-  padding-top: 3.5em;
+  padding-top: 3em;
   text-align: center;
   margin: 0 auto;
   overflow-x: hidden;
@@ -84,6 +84,7 @@ body {
 }
 
 .intro-sentence {
+  padding: 0.5em;
   font-family: 'Rubik';
   font-weight: light;
 }
@@ -381,3 +382,29 @@ h3 {
   background-color: #ffdec8;
 }
 
+
+/*Alert Message on the main website*/
+.alert {
+  padding: 30px;
+  background-color: #fe7e75;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
