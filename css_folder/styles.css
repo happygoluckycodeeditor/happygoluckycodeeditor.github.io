@@ -9,6 +9,14 @@
   }
 }
 
+::-moz-selection {
+  background-color: #ff9a93;
+}
+
+::selection {
+  background-color: #ff9a93;
+}
+
 
 /* 3D images Spline*/
 
